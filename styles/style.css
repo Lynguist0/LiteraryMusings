@@ -1,0 +1,473 @@
+@import url('./fonts.css');
+
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    transition: .2s linear;
+}
+
+html { 
+    background: url(../assets/Reading_Room.jpg) no-repeat center center fixed; 
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+html, body{ 
+    margin: none;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+:root{
+    /* Theme Colors */
+    --text-grey: #3f4954;
+    --text-dark-blue: #001d3d;
+    --text-light: #edede9;
+    --bg-color: #003566;
+    --black: #0f0f0f;
+    --white: #ffffff;
+    --midnight: #104f55;
+    --orange: #ff9505;
+
+
+    /* Gradient Color */
+    --sky: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    --orangutan: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+
+    /* theme font-family */
+    --Abel: 'Abel', cursive;
+}
+
+/*----------- Global Classes -----------*/
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style-type: none;
+}
+
+h1{
+    font-family: Tiro;
+    font-size: 4rem;
+}
+
+button.btn{
+    border: none;
+    border-radius: 3rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: Tiro;
+    cursor: pointer;
+}
+
+/*----x------- Global Classes ----x-------*/
+
+
+/*----------- navbar -----------*/
+
+
+.nav{
+    background: white;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+}
+
+.nav .nav-menu{
+    justify-content: space-between;
+}
+
+.nav .toggle-collapse{
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.nav .toggle-collapse .toggle-collapse i{
+    font-size: 1.4rem;
+    color: var(--text-grey);
+}
+
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.collapse{
+    height: 30rem;
+}
+
+.nav .nav-items{
+    display: flex;
+    margin: 0;
+}
+
+.nav .nav-items .nav-link{
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: var(--Abel);
+    font-size: 1.1rem;
+}
+
+.nav .nav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block;
+    font-family: Vazirmatn;
+    font-size: 1.6rem;
+}
+
+.nav .nav-items .nav-link:hover{
+    background-color: var(--orange);
+}
+
+.nav .social{
+    padding: 1.4rem 0;
+}
+
+.nav .social i{
+    padding: 0.2rem;
+}
+
+.nav .social .fb i:hover{
+    color: #4267B2;
+}
+
+.nav .social .ig i:hover{
+    color: #ffd373;
+}
+
+.nav .social .tw i:hover{
+    color: #00acee;
+}
+
+.nav .social .yt i:hover{
+    color: #FF0000;
+}
+
+/*----x------- navbar ----x-------*/
+
+
+/*--------------  Main Content  --------------*/
+
+/*--- Site Title ---*/
+
+main .site-title{
+    background: url(../assets/Reading_Room.jpg);
+    background-size: cover;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+}
+
+main .site-title .site-bg{
+    padding-top: 15rem;
+    text-align: center;
+    color:var(--white);
+}
+
+main .site-title h1{
+    margin: 2.5rem;
+}
+
+main .site-title .btn{
+    margin: 1.8rem;
+    background: var(--orangutan);
+}
+
+main .site-title .btn:hover{
+    background: transparent;
+    border: 1px solid var(--black);
+    color: white;
+}
+
+/*--x-- Site Title --x--*/
+
+/*------x--------  Main Content  -----x---------*/
+
+/*---------- Popular Posts ------------*/
+
+.article-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(265px, 1fr));
+    gap: 2rem;
+}
+
+.article-image{
+    margin: 0; 
+    padding: 0; 
+    overflow: hidden;
+}
+
+.article-image img{
+    max-width: 100%; 
+    height: auto;
+    border-radius: 20px 20px 0 0;
+}
+
+.article-card {
+    background: white;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.article-card:hover{
+    box-shadow: 0 4px 20px 0 rgba(34, 68, 123, 0.2);
+    cursor: pointer;
+}
+
+.article-content{
+    padding: 2rem;
+}
+
+.article-content .card-category{
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    color: #6b82a7;
+    display: block;
+    text-decoration: none;
+}
+
+.article-content .card-title{
+    margin: 1rem 0; 
+    color: #22447b;
+}
+
+.article-content .card-excerpt{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #6b82a7;
+    margin: 0;
+}
+
+@media screen and (min-width: 768px){
+    .site-container{
+        max-width: 698px;
+    }
+    .article-card{
+        display: grid;
+        grid-template-rows: 220px 1fr;
+    }
+}
+
+@media screen and (min-width: 1280px)
+{
+    .site-container{
+        max-width: 1156px;
+    }
+}
+/*-----x----- Popular Posts -----x-------*/
+
+
+/*----------- Recommended Reading --------------*/
+.container{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    background: none;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+    margin-top: 20px;
+    padding-top: 130px;
+    padding-bottom: 95px;
+}
+
+.container ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.container ul li{
+    float:left;
+    list-style: none;
+    width:20%;
+    height:300px;
+    background: none;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+    margin :20px 0px 20px 55px; 
+    border:1px solid black;
+    box-sizing: border-box;
+    font-family: Tiro;
+}
+.container ul li:hover{
+    opacity: 0.8;
+}
+
+.container ul li .bottom{
+    width: 100%;
+    height:50px;
+    line-height: 50px;
+    background: none;
+
+    text-align: center;
+    color:var(--orange);
+    font-size: 20px;
+   
+}
+
+@media screen and (max-width:1250px){
+    .container ul li{
+        width:40%;
+        margin-left: 40px;
+    }
+}
+
+/*----------- Recommended Reading --------------*/
+
+
+/*----------- Login Page ---------------*/
+#login-form
+{
+    display: flex;
+}
+
+.form-box
+{
+    width:380px;
+	height:480px;
+	position:relative;
+	margin:2% auto;
+	background:rgba(0,0,0,0.3);
+	padding:10px;
+    overflow: hidden;
+}
+.button-box
+{
+	width:220px;
+	margin:35px auto;
+	position: relative;
+	box-shadow: 0 0 20px 9px #ff61241f;
+	border-radius: 30px;
+}
+.toggle-btn
+{
+	padding:10px 30px;
+	cursor:pointer;
+	background:transparent;
+	border:0;
+	outline: none;
+	position: relative;
+}
+#btn
+{
+	top: 0;
+	left:0;
+	position: absolute;
+	width: 110px;
+	height: 100%;
+	background: #F3C693;
+	border-radius: 30px;
+	transition: .5s;
+}
+.input-group-login
+{
+	top: 150px;
+	position:absolute;
+	width:280px;
+	transition:.5s;
+}
+.input-group-register
+{
+    top: 120px;
+	position:absolute;
+	width:280px;
+	transition:.5s;
+}
+.input-field
+{
+	width: 100%;
+	padding:10px 0;
+	margin:5px 0;
+	border-left:0;
+	border-top:0;
+	border-right:0;
+	border-bottom: 1px solid #999;
+	outline:none;
+	background: transparent;
+}
+.submit-btn
+{
+	width: 85%;
+	padding: 10px 30px;
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	background: #F3C693;
+	border: 0;
+	outline: none;
+	border-radius: 30px;
+}
+
+.check-box
+{
+	margin: 30px 10px 34px 0;
+}
+
+span
+{
+	color: white;
+	font-size:12px;
+	bottom:68px;
+	position:absolute;
+}
+
+#login
+{
+	left:50px;
+}
+
+#login input
+{
+	color:white;
+	font-size:15;
+}
+
+#register
+{
+	left:450px;
+}
+
+#register input
+{
+	color:white;
+	font-size: 15;
+}
+/*----------- Login Page ---------------*/
+
+
+/*----------- Viewport less than or equal 750px -----------*/
+
+@media only screen and (max-width: 750px)
+{
+    .nav .nav-menu, .nav .nav-items{
+        flex-direction: column;
+    }
+
+    .nav .toggle-collapse{
+        display: initial;
+    }
+}
+
+
+/* -----x------ Viewport less than or equal 750px -----x------ */
