@@ -1,0 +1,52 @@
+.container{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    background: none;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+    margin-top: 20px;
+    padding-top: 130px;
+    padding-bottom: 95px;
+}
+
+.container ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.container ul li{
+    float:left;
+    list-style: none;
+    width:20%;
+    height:300px;
+    background: none;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+    margin :20px 0px 20px 55px; 
+    border:1px solid black;
+    box-sizing: border-box;
+    font-family: Tiro;
+}
+.container ul li:hover{
+    opacity: 0.8;
+}
+
+.container ul li .bottom{
+    width: 100%;
+    height:50px;
+    line-height: 50px;
+    background: none;
+
+    text-align: center;
+    color:var(--orange);
+    font-size: 20px;
+   
+}
+
+@media screen and (max-width:1250px){
+    .container ul li{
+        width:40%;
+        margin-left: 40px;
+    }
+}
+
