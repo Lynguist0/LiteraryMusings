@@ -1,0 +1,33 @@
+/* font-family: Abel */
+@font-face{
+    font-family: Abel;
+    src: url(../fonts/Abel/Abel-Regular.ttf)
+}
+
+/* font-family: Amiri */
+@font-face{
+    font-family: Amiri;
+    src: url(../fonts/Amiri/Amiri-Bold.ttf)
+}
+
+
+/* font-family: Livvic */
+@font-face{
+    font-family: Livvic;
+    src: url(../fonts/Livvic/Livvic-Black.ttf)
+}
+
+
+/* font-family: Tiro */
+@font-face{
+    font-family: Tiro;
+    src: url(../fonts/Tiro_Devanagari_Marathi/TiroDevanagariMarathi-Italic.ttf)
+}
+
+
+/* font-family: Vazirmatn */
+@font-face{
+    font-family: Vazirmatn;
+    src: url(../fonts/Vazirmatn/Vazirmatn-VariableFont_wght.ttf)
+}
+
